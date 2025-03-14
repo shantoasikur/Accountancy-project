@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@tailwind utilities;
+.dark {
+    background-color: #1a202c; /* Dark mode background */
+    color: #f7fafc; /* Light text color */
+  }
