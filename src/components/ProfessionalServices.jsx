@@ -26,7 +26,7 @@ const services = [
 
 const ProfessionalServices = () => {
   return (
-    <div className="bg-[#05254d] text-white py-12 px-8">
+    <div className="bg-gray-100 dark:bg-[#05254d] text-gray-900 dark:text-white py-12 px-8">
       <h2 className="text-center text-3xl font-bold text-green-500 mb-6">
         OUR PROFESSIONAL SERVICES INCLUDE:
       </h2>
@@ -38,9 +38,7 @@ const ProfessionalServices = () => {
           >
             <ul className="list-disc list-inside space-y-2">
               {column.map((service, i) => (
-                <li key={i} className="text-lg">
-                  {service}
-                </li>
+                <li key={i} className="text-lg">{service}</li>
               ))}
             </ul>
           </div>

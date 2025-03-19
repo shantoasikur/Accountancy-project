@@ -5,12 +5,13 @@ import { AuthContext } from "../Providers/AuthProvider";
 import { useContext, useState } from "react";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import { FiMenu } from "react-icons/fi";
-import { ThemeContext } from "../Providers/ThemeContext";
+
+import DarkModeToggler from "./DarkModeToggler";
 
 
 const Navber = () => {
   const { user, logout } = useContext(AuthContext);
-  const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
+  
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -26,7 +27,7 @@ const Navber = () => {
   };
 
   return (
-    <div className={`${isDarkMode ? "bg-gray-900 text-white" : "bg-white text-black"}`}>
+    <div >
       {/* Top Section */}
       <div className="flex md:justify-end  justify-center items-center p-4 text-center md:text-left">
         <div className="flex space-x-3">
@@ -146,12 +147,13 @@ const Navber = () => {
 
           {/* Authentication Buttons */}
           <div className="ml-auto flex items-center gap-2">
-            <button onClick={toggleDarkMode} className="btn bg-green-500 hover:bg-green-300 border-2 border-white text-white font-bold  dark:text-white" style={{
+            {/* <button onClick={toggleDarkMode} className="btn bg-green-500 hover:bg-green-300 border-2 border-white text-white font-bold  dark:text-white" style={{
               backgroundColor: isDarkMode ? "black" : "white",
               color: isDarkMode ? "white" : "black",
             }}>
               {isDarkMode ? "☀️ Light" : "🌙 Dark"}
-            </button>
+            </button> */}
+            <DarkModeToggler></DarkModeToggler>
             {user && user?.email ? (
               <div className="flex items-center gap-2">
 

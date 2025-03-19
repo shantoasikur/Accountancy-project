@@ -19,10 +19,10 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 px-4 md:px-6 py-6">
-      <div className="bg-white shadow-md rounded-lg p-6 sm:p-8 w-full max-w-lg md:max-w-2xl">
-        <h2 className="text-xl sm:text-2xl font-bold text-center mb-4 sm:mb-6 text-gray-800">
-          HAVE AN ENQUIRY? <span className="text-gray-600">DROP US A LINE</span>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 px-4 md:px-6 py-6">
+      <div className="bg-gray-800 shadow-md rounded-lg p-6 sm:p-8 w-full max-w-lg md:max-w-2xl">
+        <h2 className="text-xl sm:text-2xl font-bold text-center mb-4 sm:mb-6 text-white">
+          HAVE AN ENQUIRY? <span className="text-gray-400">DROP US A LINE</span>
         </h2>
         <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
           <input
@@ -31,7 +31,7 @@ const ContactForm = () => {
             placeholder="Name*"
             value={formData.name}
             onChange={handleChange}
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full p-3 border border-gray-600 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400"
             required
           />
           <input
@@ -40,7 +40,7 @@ const ContactForm = () => {
             placeholder="Surname*"
             value={formData.surname}
             onChange={handleChange}
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full p-3 border border-gray-600 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400"
             required
           />
           <input
@@ -49,7 +49,7 @@ const ContactForm = () => {
             placeholder="Phone Number*"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full p-3 border border-gray-600 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400"
             required
           />
           <input
@@ -58,7 +58,7 @@ const ContactForm = () => {
             placeholder="Email*"
             value={formData.email}
             onChange={handleChange}
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full p-3 border border-gray-600 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400"
             required
           />
           <textarea
@@ -66,7 +66,7 @@ const ContactForm = () => {
             placeholder="Message*"
             value={formData.message}
             onChange={handleChange}
-            className="w-full p-3 border border-gray-300 rounded-md h-28 sm:h-32 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full p-3 border border-gray-600 bg-gray-700 text-white rounded-md h-28 sm:h-32 focus:outline-none focus:ring-2 focus:ring-cyan-400"
             required
           />
           <button

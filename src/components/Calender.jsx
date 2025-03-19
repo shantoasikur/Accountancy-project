@@ -33,16 +33,16 @@ const Calendar = () => {
   };
 
   return (
-    <div className="bg-gray-100 p-4 rounded-lg shadow w-full">
+    <div className="bg-gray-900 text-white p-4 rounded-lg shadow w-full">
       <div className="flex justify-between items-center mb-2">
-        <button onClick={handlePrevMonth} className="text-gray-600 hover:text-gray-900">&lt;</button>
-        <h3 className="text-lg font-semibold text-gray-700">
+        <button onClick={handlePrevMonth} className="text-gray-400 hover:text-white">&lt;</button>
+        <h3 className="text-lg font-semibold">
           {months[currentMonth]} {currentYear}
         </h3>
-        <button onClick={handleNextMonth} className="text-gray-600 hover:text-gray-900">&gt;</button>
+        <button onClick={handleNextMonth} className="text-gray-400 hover:text-white">&gt;</button>
       </div>
 
-      <table className="w-full text-gray-600 text-sm">
+      <table className="w-full text-gray-300 text-sm">
         <thead>
           <tr className="text-center font-semibold">
             <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
@@ -52,7 +52,7 @@ const Calendar = () => {
           {[...Array(Math.ceil(daysArray.length / 7))].map((_, rowIndex) => (
             <tr key={rowIndex} className="text-center">
               {daysArray.slice(rowIndex * 7, (rowIndex + 1) * 7).map((day, index) => (
-                <td key={index} className={`p-2 ${day ? "text-black" : "text-gray-400"}`}>
+                <td key={index} className={`p-2 ${day ? "text-white" : "text-gray-500"}`}>
                   {day || ""}
                 </td>
               ))}

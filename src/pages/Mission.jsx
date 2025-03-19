@@ -1,6 +1,6 @@
 import React from 'react';
-import pic from '../assets/pic1.png'
-import pic4 from '../assets/pic4.jpg'
+import pic from '../assets/pic1.png';
+import pic4 from '../assets/pic4.jpg';
 import Navber from '../components/Navber';
 import Calendar from '../components/Calender';
 import Footer from '../components/Footer';
@@ -8,8 +8,8 @@ import OurMission from '../components/OurMission';
 
 const Mission = () => {
     return (
-        <div>
-            <Navber></Navber>
+        <div className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-200">
+            <Navber />
             <div className="relative w-full">
                 <img
                     src={pic4}
@@ -33,7 +33,7 @@ const Mission = () => {
                             { link: "https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2FshareArticle%3Fmini%3Dtrue%26title%3DAbout%2520Us%26url%3Dhttps%3A%2F%2Fhnsaccountancy.com%2Fabout-us-2%2F%26summary%3DH%2B%2526amp%253B%2BS%2BAccountancy%2Bis%2Ba%2Btrading%2Bname%2Bof%2BH%2B%2526amp%253B%2BS%2BExplore%2BLtd.%2Bthe%2Bcompany%2Bestablished%2Bin%2B2012%2Bwi...", icon: "fab fa-linkedin-in text-blue-900", text: "Share" },
                             { link: "https://digg.com/", icon: "fab fa-digg text-blue-900", text: "Share" },
                         ].map((item, index) => (
-                            <a key={index} href={item.link} target="_blank" className="social-button border-t-2 hover:border-0 bg-gray-100 p-2 rounded text-sm flex items-center gap-2">
+                            <a key={index} href={item.link} target="_blank" className="social-button border-t-2 hover:border-0 bg-gray-100 dark:bg-gray-800 p-2 rounded text-sm flex items-center gap-2">
                                 <i className={item.icon}></i> {item.text}
                             </a>
                         ))}
@@ -52,8 +52,8 @@ const Mission = () => {
 
                     {/* Latest News */}
                     <div className="mt-6">
-                        <h3 className="text-lg font-semibold text-gray-800 border-b-2 pb-2">LATEST NEWS</h3>
-                        <ul className="mt-2 text-gray-700">
+                        <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 border-b-2 pb-2">LATEST NEWS</h3>
+                        <ul className="mt-2 text-gray-700 dark:text-gray-300">
                             {[
                                 { title: "Coronavirus (COVID-19): What To Do If You’re Self-Employed And Getting Less Work Or No Work", date: "April 12, 2020" },
                                 { title: "New Rules For Taxation Of Termination Payments", date: "April 9, 2018" },
@@ -61,8 +61,8 @@ const Mission = () => {
                                 { title: "Income Tax And National Insurance Contributions: Treatment Of Termination Payments", date: "April 4, 2018" },
                             ].map((news, index) => (
                                 <li key={index} className="mt-2">
-                                    <a href="#" className="text-blue-600 hover:underline">{news.title}</a>
-                                    <p className="text-gray-500 text-sm">{news.date}</p>
+                                    <a href="#" className="text-blue-600 dark:text-blue-400 hover:underline">{news.title}</a>
+                                    <p className="text-gray-500 dark:text-gray-400 text-sm">{news.date}</p>
                                 </li>
                             ))}
                         </ul>
@@ -70,19 +70,17 @@ const Mission = () => {
 
                     {/* Client's View */}
                     <div className="mt-6">
-                        <h3 className="text-lg font-semibold text-gray-800 border-b-2 pb-2">WHAT IS OUR CLIENT’S VIEW:</h3>
-                        <p className="text-gray-700 mt-2">
+                        <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 border-b-2 pb-2">WHAT IS OUR CLIENT’S VIEW:</h3>
+                        <p className="text-gray-700 dark:text-gray-300 mt-2">
                             <span className="text-green-600 font-bold">Excellent service</span> & eager to listen to clients' needs. "Value for money"
                         </p>
                     </div>
                 </div>
             </div>
 
-            <Footer></Footer>
+            <Footer />
         </div>
-
     );
 };
-
 
 export default Mission;

@@ -3,12 +3,12 @@ import Navber from '../components/Navber';
 import AboutSection from '../components/AboutSection';
 import Footer from '../components/Footer';
 import ProfessionalServices from '../components/ProfessionalServices';
-import pic6 from '../assets/pic6.jpg'
+import pic6 from '../assets/pic6.jpg';
 
 const Home = () => {
     return (
-        <div className='dark:bg-gray-900 dark:text-gray-200'>
-            <Navber></Navber>
+        <div className='bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-200'>
+            <Navber />
             <div className="relative w-full h-[250px] md:h-[350px] lg:h-[400px]">
                 <img
                     src={pic6}
@@ -20,10 +20,9 @@ const Home = () => {
                 </div>
             </div>
 
-            <AboutSection></AboutSection>
-            <ProfessionalServices></ProfessionalServices>
-            <Footer></Footer>
-
+            <AboutSection />
+            <ProfessionalServices />
+            <Footer />
         </div>
     );
 };

@@ -48,16 +48,16 @@ const Footer = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center bg-black p-6">
+    <div className="flex flex-col items-center justify-center bg-gray-900 p-6 text-white">
       {/* Search Bar */}
       <div className="relative w-full max-w-md">
-        <div className="flex items-center bg-white rounded-lg overflow-hidden">
+        <div className="flex items-center bg-gray-800 rounded-lg overflow-hidden">
           <input
             type="text"
             placeholder="Search..."
             value={query}
             onChange={handleInputChange}
-            className="w-full p-3 text-gray-700 focus:outline-none"
+            className="w-full p-3 bg-gray-800 text-gray-300 focus:outline-none"
           />
           <button
             onClick={handleSearch}
@@ -79,11 +79,11 @@ const Footer = () => {
 
         {/* Suggestions Dropdown */}
         {suggestions.length > 0 && (
-          <ul className="absolute w-full bg-white border border-gray-300 rounded mt-1">
+          <ul className="absolute w-full bg-gray-800 border border-gray-700 rounded mt-1 text-gray-300">
             {suggestions.map((item, index) => (
               <li
                 key={index}
-                className="p-2 hover:bg-gray-200 cursor-pointer text-gray-700"
+                className="p-2 hover:bg-gray-700 cursor-pointer"
                 onClick={() => {
                   setQuery(item);
                   navigate(routes[item]); // Navigate on selection
@@ -96,13 +96,13 @@ const Footer = () => {
         )}
       </div>
 
-      <hr className="w-full border-gray-600 mt-6" />
+      <hr className="w-full border-gray-700 mt-6" />
 
       {/* Modal for No Result Found */}
       {showModal && (
-        <div className="fixed inset-0 flex justify-center   items-center">
-          <div className="w-[70vw] h-[30vw] max-w-[500px] max-h-[500px] bg-gray-200 p-6 rounded-lg shadow-lg flex flex-col items-center justify-center">
-            <p className="text-red-500 text-lg font-semibold">
+        <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50">
+          <div className="w-[70vw] h-[30vw] max-w-[500px] max-h-[500px] bg-gray-700 text-white p-6 rounded-lg shadow-lg flex flex-col items-center justify-center">
+            <p className="text-red-400 text-lg font-semibold">
               No result found
             </p>
             <button

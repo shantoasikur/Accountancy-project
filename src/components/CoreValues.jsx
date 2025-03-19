@@ -35,22 +35,22 @@ const coreValues = [
 
 const CoreValues = () => {
   return (
-    <div className="bg-white text-black py-12 px-4 md:px-10">
+    <div className="bg-gray-900 text-white py-12 px-4 md:px-10">
       {/* Title */}
       <h2 className="text-2xl md:text-3xl font-semibold text-left mb-4">
         Our Beliefs & Core Values
       </h2>
-      <hr className="border-black mb-6" />
+      <hr className="border-gray-600 mb-6" />
 
       {/* Core Values Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {coreValues.map((value, index) => (
           <div
             key={index}
-            className="p-4 bg-gray-100 rounded-lg shadow-sm hover:shadow-md transition"
+            className="p-4 bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition"
           >
             <h3 className="font-bold text-lg mb-2">{value.title}</h3>
-            <p className="text-gray-600">{value.description}</p>
+            <p className="text-gray-300">{value.description}</p>
           </div>
         ))}
       </div>
